@@ -319,24 +319,37 @@ def main():
 
     # Add custom CSS to style the chatbot
     st.markdown("""
-    <style>
+<style>
+    .stButton button {
+        display: inline-block;
+        margin: 10px auto;
+        background: linear-gradient(90deg, #5371FE 0%, #7A98FF 100%);
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 12px;
+        padding: 10px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s ease, transform 0.2s ease;
+        width: auto; /* Adjust width according to text length */
+        max-width: 100%; /* Prevent button from exceeding container width */
+    }
+    .stButton button:hover {
+        background: linear-gradient(90deg, #7A98FF 0%, #5371FE 100%);
+        transform: scale(1.05);
+    }
+
+    /* Mobile-specific adjustments */
+    @media (max-width: 600px) {
         .stButton button {
-            width: 100%;
-            margin: 2px 0;
-            background-color: #5371FE; /* Green */
-            border: none;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
             font-size: 16px;
-            cursor: pointer;
-            border-radius: 12px;
+            padding: 8px 16px;
         }
-        .stButton button:hover {
-            background-color: #5371FE;
-        }
-    </style>
+    }
+</style>
     """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
