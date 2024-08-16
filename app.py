@@ -199,7 +199,7 @@ def main():
         st.session_state.history = []
 
     st.markdown("""
-    <style>
+<style>
         body {
             background-color: #121212; /* Dark background */
             color: #e0e0e0; /* Light text color */
@@ -207,7 +207,7 @@ def main():
         .stButton button {
             width: 100%;
             margin: 2px 0;
-            background-color: #1f1f1f; /* Dark button background */
+            background: linear-gradient(45deg, #1e90ff, #00bfff); /* Blue gradient */
             border: none;
             color: #e0e0e0; /* Light text color */
             text-align: center;
@@ -218,7 +218,8 @@ def main():
             border-radius: 12px;
         }
         .stButton button:hover {
-            background-color: #333333; /* Slightly lighter on hover */
+            background: linear-gradient(45deg, #00bfff, #1e90ff); /* Swap gradient direction for hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for better hover effect */
         }
         .stChatMessage[data-author="bot"] {
             background-color: #1f1f1f; /* Dark background for bot messages */
