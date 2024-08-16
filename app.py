@@ -200,12 +200,16 @@ def main():
 
     st.markdown("""
     <style>
+        body {
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+        }
         .stButton button {
             width: 100%;
             margin: 2px 0;
-            background-color: #5371FE; /* Blue */
+            background-color: #1f1f1f; /* Dark button background */
             border: none;
-            color: white;
+            color: #e0e0e0; /* Light text color */
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -214,19 +218,21 @@ def main():
             border-radius: 12px;
         }
         .stButton button:hover {
-            background-color: #4a60e3;
+            background-color: #333333; /* Slightly lighter on hover */
         }
         .stChatMessage[data-author="bot"] {
-            background-color: #f0f0f5; /* Light background for bot messages */
+            background-color: #1f1f1f; /* Dark background for bot messages */
             border-radius: 10px;
             padding: 10px;
             margin: 5px 0;
+            color: #e0e0e0; /* Light text color */
         }
         .stChatMessage[data-author="user"] {
-            background-color: #e0f7fa; /* Light background for user messages */
+            background-color: #333333; /* Darker background for user messages */
             border-radius: 10px;
             padding: 10px;
             margin: 5px 0;
+            color: #e0e0e0; /* Light text color */
         }
     </style>
     """, unsafe_allow_html=True)
