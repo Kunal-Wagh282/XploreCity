@@ -199,7 +199,7 @@ def main():
         st.session_state.history = []
 
     st.markdown("""
-<style>
+    <style>
         body {
             background-color: #121212; /* Dark background */
             color: #e0e0e0; /* Light text color */
@@ -227,6 +227,9 @@ def main():
             padding: 10px;
             margin: 5px 0;
             color: #e0e0e0; /* Light text color */
+            text-align: left; /* Align bot messages to the left */
+            margin-right: auto; /* Push bot messages to the left */
+            width: fit-content; /* Adjust width to fit content */
         }
         .stChatMessage[data-author="user"] {
             background-color: #333333; /* Darker background for user messages */
@@ -234,9 +237,13 @@ def main():
             padding: 10px;
             margin: 5px 0;
             color: #e0e0e0; /* Light text color */
+            text-align: right; /* Align user messages to the right */
+            margin-left: auto; /* Push user messages to the right */
+            width: fit-content; /* Adjust width to fit content */
         }
     </style>
     """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
+
